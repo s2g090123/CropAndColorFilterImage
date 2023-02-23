@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.itrustmachines.testcropimage.CropView
+        android:id="@+id/crop"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/bottomBar"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#40000000"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_verticalFlip"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackground"
+            android:padding="12dp"
+            app:srcCompat="@drawable/ic_black_flip_v"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/iv_horizontalFlip"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackground"
+            android:padding="12dp"
+            app:srcCompat="@drawable/ic_black_flip_h"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/iv_rotateLeft"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackground"
+            android:padding="12dp"
+            app:srcCompat="@drawable/ic_black_rotate_left"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/iv_rotateRight"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackground"
+            android:padding="12dp"
+            app:srcCompat="@drawable/ic_black_rotate_right"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/iv_fit"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackground"
+            android:padding="12dp"
+            app:srcCompat="@drawable/ic_black_full_screen"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/iv_next"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackground"
+            android:padding="12dp"
+            app:srcCompat="@drawable/ic_black_right_arrow"
+            tools:ignore="ContentDescription" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
