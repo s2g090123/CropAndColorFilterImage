@@ -1,4 +1,4 @@
-package com.itrustmachines.testcropimage
+package com.itrustmachines.testcropimage.widget
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -14,6 +14,8 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.target.CustomTarget
 import com.bumptech.glide.request.transition.Transition
+import com.itrustmachines.testcropimage.R
+import com.itrustmachines.testcropimage.utils.GestureListener
 import kotlin.math.max
 import kotlin.math.roundToInt
 

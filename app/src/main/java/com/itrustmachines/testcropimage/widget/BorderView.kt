@@ -1,4 +1,4 @@
-package com.itrustmachines.testcropimage
+package com.itrustmachines.testcropimage.widget
 
 import android.content.Context
 import android.graphics.*

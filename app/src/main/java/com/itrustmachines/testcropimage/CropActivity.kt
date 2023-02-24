@@ -1,12 +1,13 @@
 package com.itrustmachines.testcropimage
 
+import android.content.Intent
 import android.graphics.Bitmap
 import android.os.Bundle
-import android.os.Environment
 import android.widget.ImageView
 import androidx.activity.result.PickVisualMediaRequest
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
+import com.itrustmachines.testcropimage.widget.CropView
 import java.io.File
 import java.io.FileOutputStream
 
@@ -44,7 +45,12 @@ class CropActivity : AppCompatActivity() {
         )
 
         saveBtn.setOnClickListener {
-            saveBitmap(crop.getCropBitmap())
+            val file = saveBitmap(crop.getCropBitmap())
+            startActivity(
+                Intent(this, ColorActivity::class.java).apply {
+                    putExtra(ColorActivity.INTENT_IMAGE, file.absolutePath)
+                }
+            )
         }
         flipHorizontal.setOnClickListener {
             crop.flipHorizontal()
@@ -63,13 +69,13 @@ class CropActivity : AppCompatActivity() {
         }
     }
 
-    private fun saveBitmap(bitmap: Bitmap) {
-        val downloadFolder =
-            Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS)
-        val file = File(downloadFolder, "test.png")
+    private fun saveBitmap(bitmap: Bitmap): File {
+        val folder = externalCacheDir
+        val file = File(folder, "test.png")
         val outputStream = FileOutputStream(file)
         bitmap.compress(Bitmap.CompressFormat.PNG, 100, outputStream)
         outputStream.flush()
         outputStream.close()
+        return file
     }
 }

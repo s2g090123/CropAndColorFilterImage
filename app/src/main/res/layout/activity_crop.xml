@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <com.itrustmachines.testcropimage.CropView
+    <com.itrustmachines.testcropimage.widget.CropView
         android:id="@+id/crop"
         android:layout_width="match_parent"
         android:layout_height="0dp"

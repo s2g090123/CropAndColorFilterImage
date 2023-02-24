@@ -4,6 +4,9 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="../../.gradle/caches/transforms-3/f383f70e8d02d1490b5bfd287d36639f/transformed/android-image-cropper-4.5.0/res/layout/crop_image_view.xml" value="0.234375" />
+        <entry key="app/src/main/res/drawable/ic_black_contrast.xml" value="0.1205" />
+        <entry key="app/src/main/res/drawable/ic_black_opacity.xml" value="0.1205" />
+        <entry key="app/src/main/res/layout/activity_color.xml" value="0.19610507246376813" />
         <entry key="app/src/main/res/layout/activity_crop.xml" value="0.165" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.2203125" />
         <entry key="app/src/main/res/layout/crop_image_view.xml" value="0.19610507246376813" />

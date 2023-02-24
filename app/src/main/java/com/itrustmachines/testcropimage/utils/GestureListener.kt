@@ -1,4 +1,4 @@
-package com.itrustmachines.testcropimage
+package com.itrustmachines.testcropimage.utils
 
 import android.graphics.PointF
 import android.os.Handler
